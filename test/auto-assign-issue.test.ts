@@ -6,8 +6,7 @@ import nock from 'nock'
 import myProbotApp from '../src'
 import { Probot } from 'probot'
 // Requiring our fixtures
-import payload from './fixtures/issues.opened.json'
-const ownerAssignedBody = { 'assignees': ['hiimbex'] }
+import { payload } from "./fixtures/issues.opened";
 
 nock.disableNetConnect()
 
@@ -23,7 +22,9 @@ describe('My Probot app', () => {
     app.app = () => 'test'
   })
 
-  test('assigns a user when an issue is opened', async (done) => {
+  test('assigns owner when an issue is opened and no config', async (done) => {
+    const ownerAssignedBody = { 'assignees': ['hiimbex'] }
+
     // Test that we correctly return a test token
     nock('https://api.github.com')
       .post('/app/installations/2/access_tokens')
