@@ -1,6 +1,32 @@
 sudo: false
 language: node_js
+cache:
+  directories:
+    # https://twitter.com/maybekatz/status/905213355748720640
+    - ~/.npm
+
 node_js:
-  - "8.3"
+  # https://medium.com/@mikeal/stop-supporting-old-releases-70cfa0e04b0c
+  - "lts/*"
+
+# Trigger a push build on master and greenkeeper branches + PRs build on every branches
+# Avoid double build on PRs (See https://github.com/travis-ci/travis-ci/issues/1147)
+branches:
+  only:
+    - master
+
+install:
+  - npm ci
+
+script:
+  - npm run coverage
+
+before_script:
+  - npm prune
+
+after_success:
+  - npx travis-deploy-once --pro "npx sync-glitch-cli" 
+
 notifications:
-  disabled: true
+  email:
+    on_failure: always

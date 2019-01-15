@@ -17,7 +17,8 @@
     "dev": "nodemon --exec \"npm start\"",
     "start": "probot run ./lib/index.js",
     "lint": "standard **/*.ts --fix",
-    "test": "jest && standard **/*.ts",
+    "test": "jest",
+    "coverage": "npm test  -- --coverage",
     "test:watch": "jest --watch --notify --notifyMode=change --coverage"
   },
   "dependencies": {

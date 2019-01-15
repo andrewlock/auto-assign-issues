@@ -6,7 +6,7 @@ import nock from 'nock'
 import myProbotApp from '../src'
 import { Probot } from 'probot'
 // Requiring our fixtures
-import { payload } from "./fixtures/issues.opened";
+import payload from './fixtures/issues.opened.json'
 
 nock.disableNetConnect()
 

@@ -1,4 +1,4 @@
-export const payload = {
+{
   "action": "opened",
   "issue": {
     "number": 1,
