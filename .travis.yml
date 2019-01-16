@@ -22,7 +22,7 @@ install:
   - npm ci
 
 script:
-  - npm run coverage && 
+  - npm run coverage
 
 before_script:
   - npm prune
