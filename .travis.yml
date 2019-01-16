@@ -28,7 +28,7 @@ before_script:
   - npm prune
 
 after_success:
-  - npx sync-glitch-cli'
+  - npx sync-glitch-cli
 
 notifications:
   email:
