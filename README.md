@@ -1,6 +1,6 @@
 # auto-assign-issues
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that An app to auto-assign any issues raised in a repository to specific users
+> A GitHub App built with [Probot](https://github.com/probot/probot) that auto-assigns any issues raised in a repository to specific users
 
 ## Setup
 
