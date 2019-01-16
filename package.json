@@ -4,9 +4,9 @@
   "description": "An app to auto-assign any issues raised in a repository to specific users",
   "author": "Andrew Lock <andrewlock.net@gmail.com>",
   "license": "ISC",
-  "repository": "https://github.com/probot-assign-issues.git",
-  "homepage": "https://github.com/probot-auto-assign-issues",
-  "bugs": "https://github.com//auto-assign-issues/issues",
+  "repository": "https://github.com/andrewlock/auto-assign-issues.git",
+  "homepage": "https://github.com/andrewlock/auto-assign-issues",
+  "bugs": "https://github.com/andrewlock/auto-assign-issues/issues",
   "keywords": [
     "probot",
     "github",
