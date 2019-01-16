@@ -16,16 +16,19 @@ branches:
     - master
 
 env:
- - GH_REPO="andrewlock/auto-assign-issues" DEBUG=sync-glitch*
+ - GH_REPO="andrewlock/auto-assign-issues"
 
 install:
   - npm ci
 
 script:
-  - npm run coverage && npx sync-glitch-cli
+  - npm run coverage && 
 
 before_script:
   - npm prune
+
+after_success:
+  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; npx sync-glitch-cli;fi
 
 notifications:
   email:
