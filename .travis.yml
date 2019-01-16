@@ -22,7 +22,7 @@ install:
   - npm ci
 
 script:
-  - npm run coverage && npx travis-deploy-once "npx sync-glitch-cli" 
+  - npm run coverage && npx sync-glitch-cli
 
 before_script:
   - npm prune
