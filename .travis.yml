@@ -28,7 +28,7 @@ before_script:
   - npm prune
 
 after_success:
-  - if [ "$TRAVIS_PULL_REQUEST" != "false" ]; npx sync-glitch-cli;fi
+  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; npx sync-glitch-cli; fi'
 
 notifications:
   email:
