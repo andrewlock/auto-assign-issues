@@ -16,7 +16,7 @@ branches:
     - master
 
 env:
- - GH_REPO="andrewlock/auto-assign-issues"
+ - GH_REPO="andrewlock/auto-assign-issues" DEBUG=sync-glitch*
 
 install:
   - npm ci
