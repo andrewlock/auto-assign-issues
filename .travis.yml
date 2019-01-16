@@ -15,6 +15,9 @@ branches:
   only:
     - master
 
+env:
+ - GH_REPO="andrewlock/auto-assign-issues"
+
 install:
   - npm ci
 
