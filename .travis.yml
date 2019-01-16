@@ -22,13 +22,10 @@ install:
   - npm ci
 
 script:
-  - npm run coverage
+  - npm run coverage && npx sync-glitch-cli
 
 before_script:
   - npm prune
-
-after_success:
-  - npx sync-glitch-cli
 
 notifications:
   email:
