@@ -3,12 +3,17 @@ import { AppConfig } from './app-config'
 import { chooseAssignees } from './utils'
 
 const ConfigFilename = 'auto-assign-issues.yml'
+const DefaultConfig: AppConfig = { addAssignees: true };
 
 export async function autoAssignIssue (context: Context): Promise<void> {
-  const config: AppConfig = await context.config<AppConfig | null>(ConfigFilename, { addAssignees: true })
+  const config: AppConfig = await context.config(ConfigFilename, DefaultConfig)
 
   if (!config) {
     throw new Error(`${ConfigFilename} configuration file not found`)
+  }
+
+  if(!config.addAssignees){
+    return;
   }
 
   // create an empty params object as an easy way to get the owner
