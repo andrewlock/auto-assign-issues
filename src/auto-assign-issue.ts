@@ -12,10 +12,10 @@ export async function autoAssignIssue (context: Context): Promise<void> {
   }
 
   // create an empty params object as an easy way to get the owner
-  const tempParams = context.issue({ assignees: [] })
+  const tempParams = context.issue()
   const owner = tempParams.owner
 
-  const assignees = chooseAssignees(owner, config.assignees || [], config.numberOfAssigneesToAdd || 0)
+  const assignees = chooseAssignees(owner, config.assignees || [])
 
   try {
     const addAssigneeParams = context.issue({ assignees: assignees })

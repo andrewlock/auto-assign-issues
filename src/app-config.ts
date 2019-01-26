@@ -6,7 +6,4 @@ export interface AppConfig {
    * repository owner is assigned
    */
   assignees?: string[];
-
-  /** The number of users to assign. If empty, all eligible assignees are assigned */
-  numberOfAssigneesToAdd?: number;
 }
