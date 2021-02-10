@@ -1,3 +1,8 @@
+> This app is now deprecated, as GitHub are deprecating the APIs it relies on.
+> Instead, I suggest you use a GitHub action to achieve the same effect
+> For example, https://github.com/marketplace/actions/auto-assign-issue. 
+> you can read about this approach in [my blog post](https://andrewlock.net/auto-assigning-issues-using-a-github-action/)
+
 # Probot: Auto Assign Issues
 
 > A GitHub App built with [Probot](https://github.com/probot/probot) that auto-assigns any issues raised in a repository to specific users.
